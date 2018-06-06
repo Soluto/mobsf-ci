@@ -2,7 +2,7 @@ version: '3'
 
 services:
   mobsf:
-    image: mobsf
+    image: opensecurity/mobile-security-framework-mobsf@sha256:aa11bf7c24aaf8de7054f8f86da8a135f5bea066044ab078c2715e295f32ac9e
     environment:
       - MOBSF_API_KEY=12345
     ports:
