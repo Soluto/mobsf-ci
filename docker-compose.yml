@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  mobsf:
+    image: mobsf
+    environment:
+      - MOBSF_API_KEY=12345
+    ports:
+     - 8000:8000
+  
+  scan:
+    build:
+      context: ./scan
+    environment:
+      - MOBSF_URL=http://mobsf:8000/
+      - TARGET_PATH=${TARGET_PATH}
+
+    volumes:
+      - "$PWD/output:/app/output"
+      - "$PWD/target:/app/target"
