@@ -1,0 +1,5 @@
+mobsf_image: opensecurity/mobile-security-framework-mobsf@sha256:aa11bf7c24aaf8de7054f8f86da8a135f5bea066044ab078c2715e295f32ac9e
+mobsf_scanner_image: omerl/mobsf-ci:latest
+output_folder: /users
+target_folder: /users
+target_apk: android.apk

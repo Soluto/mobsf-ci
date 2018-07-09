@@ -3,6 +3,13 @@ This repo contains all the is required to run [MobSF](https://github.com/MobSF/M
 MobSF is a security tool that can scan APK/IPA and report various security issues.
 By running it in the CI, you can find those issues earlier, and fix them. To learn more about what it MobSF and what it can detect, checkout the [blog post](https://medium.com/@omerlh/how-to-continuously-hacking-your-app-c8b32d1633ad).
 
+## Docker App
+The easiest way to use this repo is by using [docker app](https://github.com/docker/app). Simply run:
+```
+docker-app render omerl/mobsf-ci:0.3.0 --set target_folder=<path to the folder that contains the APK> --set target_apk=<apk name> --set output_folder=<path to folder where the report will be written> | docker-compose -f - up --exit-code-from scan
+```
+To parse the report, use Glue - see in the next section how.
+
 ## Usage
 * Clone the repo
 * Create a folder named `target` in the root folder, and place the target there (e.g. `target/my_app.apk`).

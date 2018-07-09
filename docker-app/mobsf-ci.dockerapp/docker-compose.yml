@@ -1,0 +1,19 @@
+version: '3.2'
+
+services:
+  mobsf:
+    image: ${mobsf_image}
+    environment:
+      - MOBSF_API_KEY=12345
+    ports:
+     - 8000:8000
+  
+  scan:
+    image: ${mobsf_scanner_image}
+    environment:
+      - MOBSF_URL=http://mobsf:8000/
+      - TARGET_PATH=/app/target/${target_apk}
+
+    volumes:
+      - "${output_folder}:/app/output"
+      - "${target_folder}:/app/target"
