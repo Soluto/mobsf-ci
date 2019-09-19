@@ -2,11 +2,11 @@ version: '3'
 
 services:
   mobsf:
-    image: opensecurity/mobile-security-framework-mobsf@sha256:aa11bf7c24aaf8de7054f8f86da8a135f5bea066044ab078c2715e295f32ac9e
+    image: opensecurity/mobile-security-framework-mobsf:latest
     environment:
       - MOBSF_API_KEY=12345
     ports:
-     - 8000:8000
+      - 8000:8000
   
   scan:
     build:
@@ -18,3 +18,6 @@ services:
     volumes:
       - "$PWD/output:/app/output"
       - "$PWD/target:/app/target"
+
+    depends_on:
+      - mobsf
