@@ -1,3 +1,7 @@
+# Deprecation Notice
+
+This repo is no longer maintained, it is kept here only as a reference.
+
 # MobSF CI
 This repo contains all the is required to run [MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF) in the CI.
 MobSF is a security tool that can scan APK/IPA and report various security issues.
