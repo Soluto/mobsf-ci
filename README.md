@@ -1,6 +1,5 @@
-# Deprecation Notice
-
-This repo is no longer maintained, it is kept here only as a reference.
+## DEPRECATED
+This repository is no longer maintained and has been archived. Feel free to browse the code, but please migrate to other solutions.
 
 # MobSF CI
 This repo contains all the is required to run [MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF) in the CI.
