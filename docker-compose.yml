@@ -4,7 +4,7 @@ services:
   mobsf:
     image: opensecurity/mobile-security-framework-mobsf:latest
     environment:
-      - MOBSF_API_KEY=12345
+      - MOBSF_API_KEY=
     ports:
       - 8000:8000
   
